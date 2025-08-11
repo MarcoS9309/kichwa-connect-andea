@@ -257,6 +257,134 @@ export const CulturalExplorer: React.FC<CulturalExplorerProps> = ({ onExploreTop
         { kichua: 'Uywakuna', spanish: 'Animales', context: 'Seres vivientes sagrados' }
       ],
       explored: exploredTopics.includes('10')
+    },
+    {
+      id: '11',
+      title: 'Medicina Tradicional en el Siglo XXI',
+      titleKichua: 'XXI Pachapi Ñawpa Hampiy',
+      category: 'tradiciones',
+      description: 'Cómo el conocimiento médico ancestral complementa la medicina moderna en comunidades actuales.',
+      content: 'Las prácticas médicas andinas, que integran plantas medicinales, rituales de sanación y comprensión holística de la salud, están siendo reconocidas por la Organización Mundial de la Salud como medicina complementaria válida. En comunidades rurales, los curanderos trabajan junto a médicos occidentales, creando un modelo de salud intercultural que respeta ambos sistemas de conocimiento. Universidades internacionales estudian principios activos de plantas andinas para desarrollar nuevos medicamentos, mientras las comunidades luchan por proteger su conocimiento tradicional de la biopiratería.',
+      vocabulary: [
+        { kichua: 'Hampiq', spanish: 'Curandero', context: 'Médico tradicional respetado' },
+        { kichua: 'Ayahuasca', spanish: 'Ayahuasca', context: 'Planta maestra de sanación' },
+        { kichua: 'Chuya', spanish: 'Limpia espiritual', context: 'Ritual de purificación' },
+        { kichua: 'Sumak kausay', spanish: 'Vida en plenitud', context: 'Concepto integral de salud' },
+        { kichua: 'Alli kay', spanish: 'Estar bien', context: 'Estado de salud completo' }
+      ],
+      explored: exploredTopics.includes('11')
+    },
+    {
+      id: '12',
+      title: 'Cambio Climático y Sabiduría Ancestral',
+      titleKichua: 'Pacha Tikray hinaspa Ñawpa Yachay',
+      category: 'agricultura',
+      description: 'Cómo las técnicas agrícolas ancestrales ofrecen soluciones al cambio climático actual.',
+      content: 'Los sistemas agrícolas andinos, desarrollados durante milenios, proporcionan estrategias comprobadas para enfrentar la variabilidad climática. Los andenes controlan la erosión y conservan agua, los cultivos diversificados resisten plagas y sequías, y las técnicas de predicción climática basadas en observación astronómica complementan los modelos meteorológicos modernos. Organizaciones internacionales como la FAO reconocen estos sistemas como "Patrimonio Agrícola Mundial" y promueven su replicación en otras regiones afectadas por el cambio climático.',
+      vocabulary: [
+        { kichua: 'Pacha tikray', spanish: 'Cambio de tiempo/clima', context: 'Transformación ambiental' },
+        { kichua: 'Waru waru', spanish: 'Camellones elevados', context: 'Agricultura resistente a inundaciones' },
+        { kichua: 'Ch'uya mit'a', spanish: 'Tiempo de sequía', context: 'Período seco predictible' },
+        { kichua: 'Para mit'a', spanish: 'Tiempo de lluvia', context: 'Estación húmeda' },
+        { kichua: 'Allpa llamkay', spanish: 'Trabajo de tierra', context: 'Conservación de suelos' }
+      ],
+      explored: exploredTopics.includes('12')
+    },
+    {
+      id: '13',
+      title: 'Economía Circular Andina',
+      titleKichua: 'Muyuy Qullqi Ruway',
+      category: 'tradiciones',
+      description: 'Los principios ancestrales de no desperdicio que inspiran modelos económicos sostenibles.',
+      content: 'La filosofía andina del "no desperdicio" y la reutilización completa de recursos naturales anticipa por siglos los principios de la economía circular moderna. Las comunidades andinas desarrollaron sistemas donde cada elemento tiene múltiples usos: el estiércol fertiliza cultivos y proporciona combustible, los residuos orgánicos alimentan animales, y nada se considera "basura". Empresas sociales contemporáneas adoptan estos principios para crear modelos de negocio sostenibles que respetan el equilibrio ecológico.',
+      vocabulary: [
+        { kichua: 'Muyuy', spanish: 'Circular / Girar', context: 'Ciclo completo sin desperdicio' },
+        { kichua: 'Ama qunqay', spanish: 'No desperdiciar', context: 'Principio de aprovechamiento total' },
+        { kichua: 'Kutichiy', spanish: 'Devolver / Reciclar', context: 'Retornar a la tierra' },
+        { kichua: 'Miray', spanish: 'Multiplicar', context: 'Incrementar recursos naturalmente' },
+        { kichua: 'Tukuy usay', spanish: 'Usar todo', context: 'Aprovechamiento integral' }
+      ],
+      explored: exploredTopics.includes('13')
+    },
+    {
+      id: '14',
+      title: 'Gobernanza Comunitaria Digital',
+      titleKichua: 'Digital Ayllu Kamachiy',
+      category: 'tradiciones',
+      description: 'Cómo las estructuras de decisión ancestrales inspiran nuevas formas de organización digital.',
+      content: 'Los modelos de decisión por consenso y participación horizontal de las comunidades andinas están siendo adoptados por organizaciones tecnológicas, cooperativas digitales y movimientos sociales globales. El concepto de "ayllu digital" emerge como alternativa a las estructuras jerárquicas tradicionales, promoviendo la toma de decisiones colectiva en espacios virtuales. Plataformas de blockchain utilizan principios similares al ayni para crear sistemas de intercambio descentralizados y equitativos.',
+      vocabulary: [
+        { kichua: 'Digital', spanish: 'Digital', context: 'Tecnología moderna' },
+        { kichua: 'Ayllu virtual', spanish: 'Comunidad virtual', context: 'Familia extendida digital' },
+        { kichua: 'Rimanakuy digital', spanish: 'Asamblea digital', context: 'Deliberación en línea' },
+        { kichua: 'Tantanakuy', spanish: 'Reunión', context: 'Encuentro colectivo' },
+        { kichua: 'Kamay', spanish: 'Crear/Organizar', context: 'Estructurar digitalmente' }
+      ],
+      explored: exploredTopics.includes('14')
+    },
+    {
+      id: '15',
+      title: 'Identidad Cultural en la Globalización',
+      titleKichua: 'Kawsay Kaq Tukuy Pachakunapi',
+      category: 'cosmovision',
+      description: 'Cómo las comunidades andinas mantienen su identidad en un mundo interconectado.',
+      content: 'En la era de la globalización, las comunidades andinas desarrollan estrategias creativas para preservar su identidad cultural mientras participan del mundo moderno. Los jóvenes indígenas utilizan redes sociales para difundir su lengua, crean música fusionando instrumentos ancestrales con géneros contemporáneos, y desarrollan empresas que comercializan productos tradicionales globalmente sin perder su autenticidad. Este proceso de "glocalización" demuestra que es posible ser simultáneamente local y global, tradicional y moderno.',
+      vocabulary: [
+        { kichua: 'Kani kaq', spanish: 'Mi identidad', context: 'Esencia personal y colectiva' },
+        { kichua: 'Tukuy pacha', spanish: 'Todo el mundo', context: 'Globalidad interconectada' },
+        { kichua: 'Ñawpa kuntur', spanish: 'Cóndor ancestral', context: 'Tradición que vuela alto' },
+        { kichua: 'Musuq ñan', spanish: 'Nuevo camino', context: 'Adaptación creativa' },
+        { kichua: 'Kay pacha runakuna', spanish: 'Gente de este mundo', context: 'Ciudadanos contemporáneos' }
+      ],
+      explored: exploredTopics.includes('15')
+    },
+    {
+      id: '16',
+      title: 'Educación Intercultural Bilingüe',
+      titleKichua: 'Iskay Simi Hatun Yachay',
+      category: 'tradiciones',
+      description: 'La lucha por una educación que valore y preserve las lenguas originarias.',
+      content: 'La educación intercultural bilingüe en Kichua representa una batalla por el reconocimiento de los sistemas de conocimiento indígenas como válidos y complementarios a la educación occidental. Universidades crean programas donde estudiantes aprenden matemáticas a través de sistemas de conteo andinos, historia desde perspectivas indígenas, y ciencias incorporando conocimientos ecológicos tradicionales. Este modelo educativo descolonizado está siendo replicado en otros países con poblaciones indígenas, reconociendo que la diversidad lingüística es esencial para preservar la diversidad cultural y de conocimientos humanos.',
+      vocabulary: [
+        { kichua: 'Iskay simi', spanish: 'Dos lenguas', context: 'Bilingüismo como riqueza' },
+        { kichua: 'Yachay wasi', spanish: 'Casa de saber', context: 'Institución educativa' },
+        { kichua: 'Intercultural', spanish: 'Intercultural', context: 'Diálogo entre culturas' },
+        { kichua: 'Yachakuq runa', spanish: 'Persona que aprende', context: 'Estudiante integral' },
+        { kichua: 'Simi wiñay', spanish: 'Lengua que vive', context: 'Idioma en uso activo' }
+      ],
+      explored: exploredTopics.includes('16')
+    },
+    {
+      id: '17',
+      title: 'Turismo Comunitario Responsable',
+      titleKichua: 'Ayllu Turismo Allin Ruway',
+      category: 'tradiciones',
+      description: 'Cómo las comunidades desarrollan turismo que beneficia a todos y preserva la cultura.',
+      content: 'El turismo comunitario andino emerge como modelo alternativo al turismo extractivo, donde las propias comunidades controlan la experiencia turística, establecen límites para proteger sitios sagrados, y utilizan los ingresos para fortalecer su cultura y mejorar sus condiciones de vida. Los visitantes no solo observan la cultura andina, sino que participan en actividades cotidianas, aprenden técnicas ancestrales, y contribuyen directamente al bienestar comunitario. Este modelo está siendo estudiado internacionalmente como ejemplo de turismo sostenible que empodera a las comunidades locales.',
+      vocabulary: [
+        { kichua: 'Turismo', spanish: 'Turismo', context: 'Visita respetuosa' },
+        { kichua: 'Ayllu turismo', spanish: 'Turismo comunitario', context: 'Hospedaje familiar' },
+        { kichua: 'Allin puriq', spanish: 'Buen viajero', context: 'Visitante respetuoso' },
+        { kichua: 'Hatun ñan', spanish: 'Camino principal', context: 'Ruta ancestral del Qhapaq Ñan' },
+        { kichua: 'Ayni turismo', spanish: 'Turismo recíproco', context: 'Intercambio cultural equitativo' }
+      ],
+      explored: exploredTopics.includes('17')
+    },
+    {
+      id: '18',
+      title: 'Tecnología Apropiada Andina',
+      titleKichua: 'Allin Teknolojia Andina',
+      category: 'agricultura',
+      description: 'Innovaciones tecnológicas que respetan y potencian los conocimientos ancestrales.',
+      content: 'Las comunidades andinas están desarrollando "tecnología apropiada" que combina innovación moderna con principios ancestrales. Sistemas de riego por goteo alimentados por energía solar siguen patrones de distribución hídrica tradicionales, aplicaciones móviles registran variedades de papa nativas en Kichua, y sistemas de alerta temprana climática integran observación astronómica ancestral con datos satelitales. Esta síntesis tecnológica demuestra que el progreso no requiere abandonar la sabiduría tradicional, sino enriquecerla con nuevas herramientas.',
+      vocabulary: [
+        { kichua: 'Teknolojia', spanish: 'Tecnología', context: 'Herramienta moderna' },
+        { kichua: 'Allin teknolojia', spanish: 'Tecnología apropiada', context: 'Innovación respetuosa' },
+        { kichua: 'Inti kallpa', spanish: 'Energía solar', context: 'Poder del padre sol' },
+        { kichua: 'Digital yachay', spanish: 'Conocimiento digital', context: 'Sabiduría en formato electrónico' },
+        { kichua: 'Musuq yachay', spanish: 'Nuevo conocimiento', context: 'Innovación basada en tradición' }
+      ],
+      explored: exploredTopics.includes('18')
     }
   ]
 

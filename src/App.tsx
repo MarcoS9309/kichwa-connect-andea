@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { BookOpen, Sparkle, Trophy, Mountain, MusicNote } from '@phosphor-icons/react'
+import { BookOpen, Sparkle, Trophy, Mountain, MusicNote, GraduationCap } from '@phosphor-icons/react'
 import { LessonsView } from '@/components/LessonsView'
 import { CulturalExplorer } from '@/components/CulturalExplorer'
 import { LessonPlayer } from '@/components/LessonPlayer'
 import { MusicDancePlayer } from '@/components/MusicDancePlayer'
 import { TopicDetail } from '@/components/TopicDetail'
 import { Dashboard } from '@/components/Dashboard'
+import { EducationalHub } from '@/components/EducationalHub'
 
-type ViewType = 'dashboard' | 'lessons' | 'cultural' | 'lesson-player' | 'music-dance-player' | 'topic-detail'
+type ViewType = 'dashboard' | 'lessons' | 'cultural' | 'lesson-player' | 'music-dance-player' | 'topic-detail' | 'educational'
 
 interface Lesson {
   id: string
@@ -50,6 +51,7 @@ function App() {
     { id: 'dashboard', label: 'Dashboard', icon: Trophy, view: 'dashboard' as ViewType },
     { id: 'lessons', label: 'Lecciones', icon: BookOpen, view: 'lessons' as ViewType },
     { id: 'cultural', label: 'Cultura', icon: Sparkle, view: 'cultural' as ViewType },
+    { id: 'educational', label: 'Academia', icon: GraduationCap, view: 'educational' as ViewType },
   ]
 
   const handleStartLesson = (lesson: Lesson) => {
@@ -104,7 +106,7 @@ function App() {
               </Badge>
             </div>
             
-            {(currentView === 'dashboard' || currentView === 'lessons' || currentView === 'cultural') && (
+            {(currentView === 'dashboard' || currentView === 'lessons' || currentView === 'cultural' || currentView === 'educational') && (
               <nav className="flex items-center gap-2">
                 {navigationItems.map((item) => {
                   const Icon = item.icon
@@ -137,6 +139,10 @@ function App() {
         
         {currentView === 'cultural' && (
           <CulturalExplorer onExploreTopic={handleExploreTopic} />
+        )}
+        
+        {currentView === 'educational' && (
+          <EducationalHub />
         )}
         
         {currentView === 'lesson-player' && selectedLesson && (

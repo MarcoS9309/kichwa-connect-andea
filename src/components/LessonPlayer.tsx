@@ -3,8 +3,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
-import { ArrowLeft, CheckCircle, Volume2, RotateCounterClockwise } from '@phosphor-icons/react'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { ArrowLeft, CheckCircle, Volume2, RotateCounterClockwise, Heart } from '@phosphor-icons/react'
 import { useKV } from '@github/spark/hooks'
+import { LessonImpact } from '@/components/LessonImpact'
 
 interface LessonContent {
   id: string
@@ -123,6 +125,9 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ lesson, onComplete, 
     setCorrectAnswers(0)
   }
 
+  // Lessons with community impact information
+  const hasImpactInfo = ['11', '12', '13', '14', '15', '16', '17', '18', '19', '20'].includes(lesson.id)
+
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="flex items-center gap-4">
@@ -156,10 +161,33 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ lesson, onComplete, 
             </div>
           </CardHeader>
           <CardContent className="space-y-6">
-            <div className="bg-muted/50 p-6 rounded-lg border border-border/30">
-              <h3 className="font-semibold mb-3 text-primary">Contexto Cultural</h3>
-              <p className="leading-relaxed">{lesson.culturalContext}</p>
-            </div>
+            {hasImpactInfo ? (
+              <Tabs defaultValue="context" className="w-full">
+                <TabsList className="grid w-full grid-cols-2">
+                  <TabsTrigger value="context">Contexto Cultural</TabsTrigger>
+                  <TabsTrigger value="impact" className="gap-2">
+                    <Heart size={16} />
+                    Importancia Actual
+                  </TabsTrigger>
+                </TabsList>
+                
+                <TabsContent value="context">
+                  <div className="bg-muted/50 p-6 rounded-lg border border-border/30">
+                    <h3 className="font-semibold mb-3 text-primary">Contexto Cultural</h3>
+                    <p className="leading-relaxed">{lesson.culturalContext}</p>
+                  </div>
+                </TabsContent>
+                
+                <TabsContent value="impact">
+                  <LessonImpact lessonId={lesson.id} />
+                </TabsContent>
+              </Tabs>
+            ) : (
+              <div className="bg-muted/50 p-6 rounded-lg border border-border/30">
+                <h3 className="font-semibold mb-3 text-primary">Contexto Cultural</h3>
+                <p className="leading-relaxed">{lesson.culturalContext}</p>
+              </div>
+            )}
             
             <div className="text-center">
               <Button 

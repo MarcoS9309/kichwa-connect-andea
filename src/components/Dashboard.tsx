@@ -9,8 +9,8 @@ export const Dashboard: React.FC = () => {
   const [completedLessons] = useKV<string[]>('completed-lessons', [])
   const [exploredTopics] = useKV<string[]>('explored-topics', [])
   
-  const totalLessons = 10
-  const totalTopics = 10
+  const totalLessons = 20
+  const totalTopics = 18
   const completionRate = (completedLessons.length / totalLessons) * 100
   const explorationRate = (exploredTopics.length / totalTopics) * 100
 
