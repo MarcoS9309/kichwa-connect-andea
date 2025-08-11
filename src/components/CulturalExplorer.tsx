@@ -284,8 +284,8 @@ export const CulturalExplorer: React.FC<CulturalExplorerProps> = ({ onExploreTop
       vocabulary: [
         { kichua: 'Pacha tikray', spanish: 'Cambio de tiempo/clima', context: 'Transformación ambiental' },
         { kichua: 'Waru waru', spanish: 'Camellones elevados', context: 'Agricultura resistente a inundaciones' },
-        { kichua: 'Ch'uya mit'a', spanish: 'Tiempo de sequía', context: 'Período seco predictible' },
-        { kichua: 'Para mit'a', spanish: 'Tiempo de lluvia', context: 'Estación húmeda' },
+        { kichua: "Ch'uya mit'a", spanish: 'Tiempo de sequía', context: 'Período seco predictible' },
+        { kichua: "Para mit'a", spanish: 'Tiempo de lluvia', context: 'Estación húmeda' },
         { kichua: 'Allpa llamkay', spanish: 'Trabajo de tierra', context: 'Conservación de suelos' }
       ],
       explored: exploredTopics.includes('12')
