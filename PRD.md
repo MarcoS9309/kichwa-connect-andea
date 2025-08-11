@@ -1,48 +1,64 @@
 # AndeanLearn - Plataforma Digital para el Aprendizaje del Kichua y Cultura Andina
 
-Una aplicación educativa innovadora que combina el aprendizaje del idioma Kichua con la preservación y transmisión de las costumbres andinas ancestrales.
+Una aplicación educativa innovadora que combina el aprendizaje del idioma Kichua con la preservación y transmisión de las costumbres andinas ancestrales, con énfasis especial en música y danzas tradicionales.
 
 **Experience Qualities**:
 1. **Culturalmente Auténtico** - Respeta y honra las tradiciones andinas con contenido verificado por académicos
 2. **Progresivo e Intuitivo** - Aprendizaje estructurado que permite avance gradual desde conceptos básicos
 3. **Académicamente Riguroso** - Contenido basado en investigación lingüística y antropológica universitaria
+4. **Multisensorial** - Integra elementos visuales, auditivos y kinestésicos para un aprendizaje completo
 
 **Complexity Level**: Light Application (multiple features with basic state)
-- Funcionalidades educativas interactivas con seguimiento de progreso, ideal para demostrar metodologías pedagógicas innovadoras en entorno universitario
+- Funcionalidades educativas interactivas con seguimiento de progreso, módulos especializados en música y danza, ideal para demostrar metodologías pedagógicas innovadoras en entorno universitario
 
 ## Essential Features
 
-**Lecciones Interactivas**
-- Functionality: Módulos de aprendizaje que combinan vocabulario Kichua con contexto cultural
+**Lecciones Interactivas de Idioma**
+- Functionality: Módulos básicos de aprendizaje que combinan vocabulario Kichua con contexto cultural
 - Purpose: Enseñar el idioma dentro de su marco cultural original para comprensión holística
 - Trigger: Usuario selecciona lección desde dashboard principal
 - Progression: Selección de lección → Presentación de concepto cultural → Vocabulario asociado → Ejercicio práctico → Retroalimentación → Progreso guardado
 - Success criteria: Usuario completa ejercicios con 80% de precisión y comprende contexto cultural
 
-**Explorador Cultural**
-- Functionality: Secciones temáticas sobre tradiciones, ceremonias, agricultura, y cosmovisión andina
-- Purpose: Contextualizar el aprendizaje del idioma dentro de la riqueza cultural andina
+**Lecciones de Música Andina**
+- Functionality: Módulos especializados que enseñan sobre instrumentos, géneros y cantos tradicionales con simulación audio interactiva
+- Purpose: Preservar y transmitir el patrimonio musical andino mientras se aprende vocabulario especializado
+- Trigger: Selección de lección musical desde vista de lecciones
+- Progression: Introducción cultural → Teoría musical → Práctica interactiva → Vocabulario musical → Evaluación
+- Success criteria: Usuario identifica instrumentos, comprende contextos ceremoniales y aprende vocabulario musical específico
+
+**Lecciones de Danza Andina**
+- Functionality: Módulos que enseñan movimientos, significados y contextos de danzas tradicionales
+- Purpose: Transmitir el conocimiento corporal y espiritual de las danzas ceremoniales y festivas
+- Trigger: Selección de lección de danza desde vista de lecciones
+- Progression: Contexto cultural → Pasos básicos → Movimientos rituales → Formaciones grupales → Significado ceremonial
+- Success criteria: Usuario comprende simbolismo de movimientos y contexto cultural de cada danza
+
+**Explorador Cultural Expandido**
+- Functionality: Secciones temáticas sobre tradiciones, ceremonias, agricultura, cosmovisión, música y danza andina
+- Purpose: Contextualizar el aprendizaje del idioma dentro de la riqueza cultural andina completa
 - Trigger: Navegación desde menú principal o enlaces dentro de lecciones
 - Progression: Selección de tema → Contenido multimedia → Vocabulario específico → Reflexión cultural → Marcado como explorado
 - Success criteria: Usuario explora contenido y demuestra comprensión de conceptos culturales
 
-**Seguimiento de Progreso**
-- Functionality: Dashboard que muestra avance en lecciones y conocimiento cultural adquirido
-- Purpose: Motivar continuidad y permitir evaluación académica del aprendizaje
+**Seguimiento de Progreso Gamificado**
+- Functionality: Dashboard que muestra avance en lecciones, logros específicos de música/danza y conocimiento cultural adquirido
+- Purpose: Motivar continuidad y permitir evaluación académica del aprendizaje integral
 - Trigger: Automático al completar actividades o acceso directo desde menú
-- Progression: Actividad completada → Actualización automática → Visualización de progreso → Sugerencias de próximos pasos
-- Success criteria: Registro preciso de progreso y retroalimentación constructiva
+- Progression: Actividad completada → Actualización automática → Logros desbloqueados → Visualización de progreso → Sugerencias de próximos pasos
+- Success criteria: Registro preciso de progreso con logros específicos para diferentes tipos de aprendizaje
 
 ## Edge Case Handling
 
-- **Contenido Incompleto**: Placeholder educativo cuando sección está en desarrollo
+- **Contenido Multimedia Incompleto**: Placeholder educativo cuando audio/video está en desarrollo
 - **Progreso Perdido**: Recuperación automática desde almacenamiento local persistente
-- **Respuestas Incorrectas**: Explicación pedagógica en lugar de simple corrección
-- **Navegación Rápida**: Breadcrumbs claros para orientación en contenido extenso
+- **Simulación de Audio**: Representación visual y textual cuando audio real no está disponible
+- **Respuestas Incorrectas**: Explicación pedagógica con contexto cultural en lugar de simple corrección
+- **Navegación Compleja**: Breadcrumbs claros para orientación en contenido extenso con múltiples categorías
 
 ## Design Direction
 
-La interfaz debe evocar la serenidad y conexión con la naturaleza características de la filosofía andina, combinando elementos visuales que reflejan textiles, colores y patrones tradicionales con una presentación moderna y académica.
+La interfaz debe evocar la serenidad y conexión con la naturaleza características de la filosofía andina, combinando elementos visuales que reflejan textiles, colores y patrones tradicionales con una presentación moderna y académica. Los módulos de música y danza requieren elementos visuales que sugieran movimiento y ritmo.
 
 ## Color Selection
 

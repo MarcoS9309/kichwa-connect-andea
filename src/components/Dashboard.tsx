@@ -9,8 +9,8 @@ export const Dashboard: React.FC = () => {
   const [completedLessons] = useKV<string[]>('completed-lessons', [])
   const [exploredTopics] = useKV<string[]>('explored-topics', [])
   
-  const totalLessons = 3
-  const totalTopics = 4
+  const totalLessons = 10
+  const totalTopics = 10
   const completionRate = (completedLessons.length / totalLessons) * 100
   const explorationRate = (exploredTopics.length / totalTopics) * 100
 
@@ -49,17 +49,45 @@ export const Dashboard: React.FC = () => {
       icon: '🗺️'
     },
     {
+      id: 'music-apprentice',
+      title: 'Aprendiz Musical',
+      description: 'Completaste tu primera lección de música andina',
+      unlocked: completedLessons.some(id => ['4', '6', '7', '9'].includes(id)),
+      icon: '🎵'
+    },
+    {
+      id: 'dance-student',
+      title: 'Estudiante de Danza',
+      description: 'Completaste tu primera lección de danza andina',
+      unlocked: completedLessons.some(id => ['5', '8', '10'].includes(id)),
+      icon: '💃'
+    },
+    {
+      id: 'rhythm-master',
+      title: 'Maestro del Ritmo',
+      description: 'Completaste todas las lecciones de música',
+      unlocked: ['4', '6', '7', '9'].every(id => completedLessons.includes(id)),
+      icon: '🥁'
+    },
+    {
+      id: 'dance-master',
+      title: 'Maestro de la Danza',
+      description: 'Completaste todas las lecciones de danza',
+      unlocked: ['5', '8', '10'].every(id => completedLessons.includes(id)),
+      icon: '🌟'
+    },
+    {
       id: 'dedicated-learner',
       title: 'Estudiante Dedicado',
-      description: 'Completaste todas las lecciones básicas',
-      unlocked: completedLessons.length >= 2,
+      description: 'Completaste 5 lecciones',
+      unlocked: completedLessons.length >= 5,
       icon: '📚'
     },
     {
       id: 'wisdom-keeper',
       title: 'Guardián de la Sabiduría',
-      description: 'Exploraste todos los temas culturales',
-      unlocked: exploredTopics.length >= 4,
+      description: 'Completaste todo el programa de AndeanLearn',
+      unlocked: completedLessons.length >= 10 && exploredTopics.length >= 8,
       icon: '🏔️'
     }
   ]

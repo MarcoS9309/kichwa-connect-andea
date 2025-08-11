@@ -3,14 +3,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Leaf, Sun, Users, Sparkle } from '@phosphor-icons/react'
+import { Leaf, Sun, Users, Sparkle, MusicNote, PersonArmsSpread } from '@phosphor-icons/react'
 import { useKV } from '@github/spark/hooks'
 
 interface CulturalTopic {
   id: string
   title: string
   titleKichua: string
-  category: 'tradiciones' | 'ceremonias' | 'agricultura' | 'cosmovision'
+  category: 'tradiciones' | 'ceremonias' | 'agricultura' | 'cosmovision' | 'musica' | 'danza'
   description: string
   content: string
   vocabulary: Array<{
@@ -31,14 +31,18 @@ const TopicCard: React.FC<TopicCardProps> = ({ topic, onExplore }) => {
     tradiciones: Users,
     ceremonias: Sparkle,
     agricultura: Leaf,
-    cosmovision: Sun
+    cosmovision: Sun,
+    musica: MusicNote,
+    danza: PersonArmsSpread
   }
 
   const categoryColors = {
     tradiciones: 'bg-secondary text-secondary-foreground',
     ceremonias: 'bg-accent text-accent-foreground',
     agricultura: 'bg-muted text-muted-foreground',
-    cosmovision: 'bg-primary text-primary-foreground'
+    cosmovision: 'bg-primary text-primary-foreground',
+    musica: 'bg-accent text-accent-foreground',
+    danza: 'bg-secondary text-secondary-foreground'
   }
 
   const Icon = categoryIcons[topic.category]
@@ -157,6 +161,102 @@ export const CulturalExplorer: React.FC<CulturalExplorerProps> = ({ onExploreTop
         { kichua: 'Pacha', spanish: 'Mundo/Tiempo/Espacio', context: 'Concepto integral de realidad' }
       ],
       explored: exploredTopics.includes('4')
+    },
+    {
+      id: '5',
+      title: 'Instrumentos Ancestrales',
+      titleKichua: 'Ñawpa Takina Wakanaykuna',
+      category: 'musica',
+      description: 'Los instrumentos musicales sagrados y su significado espiritual en la cultura andina.',
+      content: 'Los instrumentos andinos trascienden su función musical para convertirse en objetos sagrados que conectan los mundos. La quena imita el viento de las montañas, el charango evoca el canto de las aves, y los tambores replican el latido del corazón de la Pachamama. Cada instrumento tiene su momento ritual específico y su poder de comunicación con las deidades.',
+      vocabulary: [
+        { kichua: 'Kena', spanish: 'Quena', context: 'Flauta vertical que canaliza el viento sagrado' },
+        { kichua: 'Charango', spanish: 'Charango', context: 'Instrumento de cuerdas del altiplano' },
+        { kichua: 'Pinkullu', spanish: 'Pinkullo', context: 'Flauta traversa de ceremonias' },
+        { kichua: 'Wankara', spanish: 'Tambor grande', context: 'Percusión ceremonial mayor' },
+        { kichua: 'Antara', spanish: 'Zampoña', context: 'Flauta de pan andina' }
+      ],
+      explored: exploredTopics.includes('5')
+    },
+    {
+      id: '6',
+      title: 'Huayno: El Alma Musical Andina',
+      titleKichua: 'Wayno: Andean Animapa Takinan',
+      category: 'musica',
+      description: 'El género musical más representativo de los Andes, expresión del sentir popular.',
+      content: 'El huayno es el corazón musical de los Andes, un género que expresa las emociones más profundas del pueblo andino: el amor, la nostalgia, la celebración y el dolor. Sus melodías pentatónicas y ritmos característicos han perdurado desde épocas precolombinas, adaptándose a cada región pero manteniendo su esencia espiritual. Es la música del cortejo, del trabajo comunitario y de las festividades sagradas.',
+      vocabulary: [
+        { kichua: 'Wayno', spanish: 'Huayno', context: 'Género musical tradicional andino' },
+        { kichua: 'Takiy', spanish: 'Cantar', context: 'Acto sagrado de entonar melodías' },
+        { kichua: 'Kusisqa takiy', spanish: 'Canto alegre', context: 'Música de celebración' },
+        { kichua: 'Munasqa', spanish: 'Amado/a', context: 'Tema central del huayno romántico' },
+        { kichua: 'Llaqta takiy', spanish: 'Canto del pueblo', context: 'Música de identidad regional' }
+      ],
+      explored: exploredTopics.includes('6')
+    },
+    {
+      id: '7',
+      title: 'Danzas Rituales Andinas',
+      titleKichua: 'Hatun Tusuy',
+      category: 'danza',
+      description: 'Las danzas sagradas que conectan el mundo terrenal con el espiritual.',
+      content: 'Las danzas rituales andinas son oraciones corporales que establecen comunicación directa con las deidades y fuerzas naturales. Cada movimiento tiene significado cósmico: los saltos imitan el vuelo del cóndor, los giros representan los ciclos naturales, y las formaciones grupales recrean las constelaciones. Estas danzas se ejecutan en momentos específicos del calendario ceremonial, siendo fundamentales para mantener el equilibrio entre los mundos.',
+      vocabulary: [
+        { kichua: 'Hatun tusuy', spanish: 'Danza sagrada', context: 'Baile ceremonial de gran importancia' },
+        { kichua: 'Qhapaq tusuy', spanish: 'Danza real', context: 'Baile de la nobleza incaica' },
+        { kichua: 'Apu tusuy', spanish: 'Danza de los apus', context: 'Baile de veneración a las montañas' },
+        { kichua: 'Chakana tusuy', spanish: 'Danza de la cruz andina', context: 'Baile del orden cósmico' },
+        { kichua: 'Inti tusuy', spanish: 'Danza del sol', context: 'Baile de adoración solar' }
+      ],
+      explored: exploredTopics.includes('7')
+    },
+    {
+      id: '8',
+      title: 'La Marinera Andina',
+      titleKichua: 'Marinera Andina',
+      category: 'danza',
+      description: 'Danza de cortejo que fusiona elementos indígenas, españoles y criollos.',
+      content: 'La marinera andina representa la síntesis cultural del mestizaje, donde los movimientos indígenas del cortejo ritual se fusionan con elementos españoles y africanos. Esta danza de galanteo cuenta una historia de seducción donde el varón corteja a la mujer con movimientos que evocan el vuelo del cóndor y la gracia de la vicuña. El uso del pañuelo simboliza la comunicación sutil entre los danzantes, mientras que los pasos recrean los rituales ancestrales de fertilidad.',
+      vocabulary: [
+        { kichua: 'Marinera', spanish: 'Marinera', context: 'Danza de cortejo mestiza' },
+        { kichua: 'Sipas tusuy', spanish: 'Danza de la doncella', context: 'Movimientos femeninos de coqueteo' },
+        { kichua: 'Qhari tusuy', spanish: 'Danza del varón', context: 'Movimientos masculinos de galanteo' },
+        { kichua: 'Pañuelo tusuy', spanish: 'Danza del pañuelo', context: 'Comunicación a través del textil' },
+        { kichua: 'Zapateo', spanish: 'Zapateo', context: 'Percusión con los pies' }
+      ],
+      explored: exploredTopics.includes('8')
+    },
+    {
+      id: '9',
+      title: 'Cantos de Trabajo Comunitario',
+      titleKichua: 'Ayni Takiykuna',
+      category: 'musica',
+      description: 'La música que acompaña las faenas comunales y fortalece los lazos sociales.',
+      content: 'Los cantos de trabajo comunitario son expresiones musicales que sincronizan las labores colectivas y fortalecen la cohesión social. Durante la siembra, la cosecha, la construcción de casas o la limpieza de acequias, estos cantos marcan el ritmo del trabajo, narran historias ancestrales y mantienen el espíritu comunitario. La música transforma el esfuerzo físico en celebración espiritual, recordando que el trabajo es sagrado cuando se realiza en armonía con la comunidad y la naturaleza.',
+      vocabulary: [
+        { kichua: 'Ayni takiy', spanish: 'Canto de reciprocidad', context: 'Música del trabajo comunitario' },
+        { kichua: 'Minka takiy', spanish: 'Canto de la minga', context: 'Música de la faena colectiva' },
+        { kichua: 'Tarpuy takiy', spanish: 'Canto de siembra', context: 'Música del tiempo de sembrar' },
+        { kichua: 'Pallay takiy', spanish: 'Canto de cosecha', context: 'Música del tiempo de cosechar' },
+        { kichua: 'Ruway takiy', spanish: 'Canto de hacer', context: 'Música del trabajo manual' }
+      ],
+      explored: exploredTopics.includes('9')
+    },
+    {
+      id: '10',
+      title: 'Danzas de los Animales Sagrados',
+      titleKichua: 'Hatun Uywakunap Tusuynin',
+      category: 'danza',
+      description: 'Danzas que honran y representan a los animales considerados sagrados en la cultura andina.',
+      content: 'Las danzas de animales sagrados son representaciones coreográficas que honran a las criaturas que los andinos consideran intermediarios entre los mundos. La danza del cóndor imita al mensajero de los apus, la danza de la llama celebra al animal que carga las ofrendas a los dioses, y la danza del puma representa la fuerza y sabiduría del felino sagrado. Estas danzas no solo imitan movimientos animales, sino que invocan sus espíritus protectores y sus cualidades especiales.',
+      vocabulary: [
+        { kichua: 'Kuntur tusuy', spanish: 'Danza del cóndor', context: 'Baile del ave sagrada de las alturas' },
+        { kichua: 'Llama tusuy', spanish: 'Danza de la llama', context: 'Baile del animal sagrado de carga' },
+        { kichua: 'Puma tusuy', spanish: 'Danza del puma', context: 'Baile del felino de poder' },
+        { kichua: 'Vicuña tusuy', spanish: 'Danza de la vicuña', context: 'Baile del animal de fibra sagrada' },
+        { kichua: 'Uywakuna', spanish: 'Animales', context: 'Seres vivientes sagrados' }
+      ],
+      explored: exploredTopics.includes('10')
     }
   ]
 
@@ -164,7 +264,9 @@ export const CulturalExplorer: React.FC<CulturalExplorerProps> = ({ onExploreTop
     { key: 'tradiciones', label: 'Tradiciones', icon: Users },
     { key: 'ceremonias', label: 'Ceremonias', icon: Sparkle },
     { key: 'agricultura', label: 'Agricultura', icon: Leaf },
-    { key: 'cosmovision', label: 'Cosmovisión', icon: Sun }
+    { key: 'cosmovision', label: 'Cosmovisión', icon: Sun },
+    { key: 'musica', label: 'Música', icon: MusicNote },
+    { key: 'danza', label: 'Danza', icon: PersonArmsSpread }
   ] as const
 
   const getTopicsByCategory = (category: string) => 
@@ -183,7 +285,7 @@ export const CulturalExplorer: React.FC<CulturalExplorerProps> = ({ onExploreTop
       </div>
 
       <Tabs defaultValue="all" className="w-full">
-        <TabsList className="grid w-full grid-cols-5 mb-6">
+        <TabsList className="grid w-full grid-cols-7 mb-6">
           <TabsTrigger value="all" className="gap-2">
             <Sparkle size={16} />
             Todos

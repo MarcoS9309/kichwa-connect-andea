@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { BookOpen, Sparkle, Trophy, Mountain } from '@phosphor-icons/react'
+import { BookOpen, Sparkle, Trophy, Mountain, MusicNote } from '@phosphor-icons/react'
 import { LessonsView } from '@/components/LessonsView'
 import { CulturalExplorer } from '@/components/CulturalExplorer'
 import { LessonPlayer } from '@/components/LessonPlayer'
+import { MusicDancePlayer } from '@/components/MusicDancePlayer'
 import { TopicDetail } from '@/components/TopicDetail'
 import { Dashboard } from '@/components/Dashboard'
 
-type ViewType = 'dashboard' | 'lessons' | 'cultural' | 'lesson-player' | 'topic-detail'
+type ViewType = 'dashboard' | 'lessons' | 'cultural' | 'lesson-player' | 'music-dance-player' | 'topic-detail'
 
 interface Lesson {
   id: string
@@ -29,7 +30,7 @@ interface CulturalTopic {
   id: string
   title: string
   titleKichua: string
-  category: 'tradiciones' | 'ceremonias' | 'agricultura' | 'cosmovision'
+  category: 'tradiciones' | 'ceremonias' | 'agricultura' | 'cosmovision' | 'musica' | 'danza'
   description: string
   content: string
   vocabulary: Array<{
@@ -53,7 +54,13 @@ function App() {
 
   const handleStartLesson = (lesson: Lesson) => {
     setSelectedLesson(lesson)
-    setCurrentView('lesson-player')
+    // Check if it's a music or dance lesson (lessons 4-10)
+    const musicDanceLessons = ['4', '5', '6', '7', '8', '9', '10']
+    if (musicDanceLessons.includes(lesson.id)) {
+      setCurrentView('music-dance-player')
+    } else {
+      setCurrentView('lesson-player')
+    }
   }
 
   const handleExploreTopic = (topic: CulturalTopic) => {
@@ -67,6 +74,11 @@ function App() {
   }
 
   const handleBackFromLesson = () => {
+    setSelectedLesson(null)
+    setCurrentView('lessons')
+  }
+
+  const handleBackFromMusicDance = () => {
     setSelectedLesson(null)
     setCurrentView('lessons')
   }
@@ -132,6 +144,17 @@ function App() {
             lesson={selectedLesson}
             onComplete={handleLessonComplete}
             onBack={handleBackFromLesson}
+          />
+        )}
+        
+        {currentView === 'music-dance-player' && selectedLesson && (
+          <MusicDancePlayer 
+            lesson={{
+              ...selectedLesson,
+              type: ['4', '6', '7', '9'].includes(selectedLesson.id) ? 'music' : 'dance'
+            }}
+            onComplete={handleLessonComplete}
+            onBack={handleBackFromMusicDance}
           />
         )}
         
