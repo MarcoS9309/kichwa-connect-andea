@@ -111,9 +111,9 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ lesson, onComplete, 
       setCompletedLessons((currentLessons) => {
         if (!currentLessons.includes(lesson.id)) {
           return [...currentLessons, lesson.id]
-        }
-        return currentLessons
-      })
+    }   }
+  }
+
     }
   }
 
