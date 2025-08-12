@@ -7,12 +7,12 @@
   }
   
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   }
 }
 
 :root {
-  --background: oklch(0.98 0.02 45);
+  --background: oklch(96.8% 0.007 247.896);
   --foreground: oklch(0.45 0.15 240);
 
   --card: oklch(0.99 0.01 45);
@@ -35,7 +35,15 @@
   --input: oklch(0.88 0.04 45);
   --ring: oklch(0.75 0.18 85);
 
-  --radius: 0.75rem;
+  --radius: 1rem;
+
+  --font-sans: Hubot Sans;
+
+  --font-serif: Noto Serif;
+
+  --font-mono: "Geist Mono";
+
+  --spacing: 0.25rem;
 }
 
 @theme {
