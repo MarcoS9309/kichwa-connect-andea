@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { BookOpen, Sparkle, Trophy, Mountain, MusicNote, GraduationCap } from '@phosphor-icons/react'
+import { BookOpen, Sparkle, Trophy, Mountain, GraduationCap } from '@phosphor-icons/react'
 import { LessonsView } from '@/components/LessonsView'
 import { CulturalExplorer } from '@/components/CulturalExplorer'
 import { LessonPlayer } from '@/components/LessonPlayer'
@@ -101,9 +101,7 @@ function App() {
                 <Mountain size={24} className="text-primary" />
                 <h1 className="text-xl font-bold text-primary">Aprendizaje Intercultural</h1>
               </div>
-              <Badge variant="secondary" className="text-xs font-medium">
-                Universidad Digital
-              </Badge>
+
             </div>
             
             {(currentView === 'dashboard' || currentView === 'lessons' || currentView === 'cultural' || currentView === 'educational') && (
@@ -188,7 +186,7 @@ function App() {
               Esta iniciativa constituye un modelo experimental de aprendizaje intercultural que integra 
               tecnologías digitales contemporáneas con conocimientos ancestrales, permitiendo validar 
               nuevas metodologías pedagógicas para la revitalización de lenguas originarias y la 
-              transmisión de saberes tradicionales en contextos universitarios modernos.
+              transmisión de saberes tradicionales en contextos comunitarios y escolares.
             </p>
           </div>
         </div>
