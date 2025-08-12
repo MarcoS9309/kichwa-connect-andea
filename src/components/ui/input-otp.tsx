@@ -1,6 +1,6 @@
 "use client"
 
-import { ComponentProps, useContext } from "react"
+import React, { ComponentProps, useContext } from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import MinusIcon from "lucide-react/dist/esm/icons/minus"
 
