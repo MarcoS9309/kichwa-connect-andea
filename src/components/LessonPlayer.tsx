@@ -114,6 +114,8 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ lesson, onComplete, 
         }
         return currentLessons
       })
+    }
+  }
 
   const handleComplete = () => {
     onComplete()
