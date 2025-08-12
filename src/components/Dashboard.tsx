@@ -87,7 +87,7 @@ export const Dashboard: React.FC = () => {
       id: 'wisdom-keeper',
       title: 'Guardián de la Sabiduría',
       description: 'Completaste todo el programa de AndeanLearn',
-      unlocked: completedLessons.length >= 10 && exploredTopics.length >= 8,
+      unlocked: completedLessons.length >= 20 && exploredTopics.length >= 18,
       icon: '🏔️'
     }
   ]

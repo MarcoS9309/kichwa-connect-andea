@@ -28,11 +28,13 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({ topic, onBack }) => {
   const [exploredTopics, setExploredTopics] = useKV<string[]>('explored-topics', [])
   
   const markAsExplored = () => {
-    const newExploredTopics = [...exploredTopics]
-    if (!newExploredTopics.includes(topic.id)) {
-      newExploredTopics.push(topic.id)
-      setExploredTopics(newExploredTopics)
-    }
+    // Use functional update to avoid stale closure issues
+    setExploredTopics((currentTopics) => {
+      if (!currentTopics.includes(topic.id)) {
+        return [...currentTopics, topic.id]
+      }
+      return currentTopics
+    })
   }
 
   const categoryColors = {

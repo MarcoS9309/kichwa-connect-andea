@@ -10,7 +10,10 @@ interface MusicDanceLesson {
   id: string
   title: string
   titleKichua: string
+  description: string
   culturalContext: string
+  difficulty: 'Básico' | 'Intermedio' | 'Avanzado'
+  completed: boolean
   type: 'music' | 'dance'
   vocabulary: Array<{
     kichua: string

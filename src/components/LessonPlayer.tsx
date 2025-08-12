@@ -12,7 +12,10 @@ interface LessonContent {
   id: string
   title: string
   titleKichua: string
+  description: string
   culturalContext: string
+  difficulty: 'Básico' | 'Intermedio' | 'Avanzado'
+  completed: boolean
   vocabulary: Array<{
     kichua: string
     spanish: string
@@ -104,11 +107,13 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ lesson, onComplete, 
       setShowExplanation(false)
     } else {
       setCurrentStep('completed')
-      const newCompletedLessons = [...completedLessons]
-      if (!newCompletedLessons.includes(lesson.id)) {
-        newCompletedLessons.push(lesson.id)
-        setCompletedLessons(newCompletedLessons)
-      }
+      // Use functional update to avoid stale closure issues
+      setCompletedLessons((currentLessons) => {
+        if (!currentLessons.includes(lesson.id)) {
+          return [...currentLessons, lesson.id]
+        }
+        return currentLessons
+      })
     }
   }
 
