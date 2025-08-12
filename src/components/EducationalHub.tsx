@@ -12,6 +12,7 @@ import {
   BookOpen,
   Sparkle
 } from '@phosphor-icons/react'
+import academicImage from '@/assets/images/ChatGPT_Image_12_ago_2025,_12_19_17.png'
 
 interface EducationalContent {
   id: string
@@ -208,6 +209,23 @@ export const EducationalHub: React.FC = () => {
           Descubre cómo el conocimiento ancestral andino está transformando la educación superior, 
           la investigación científica y el desarrollo tecnológico en universidades de todo el mundo.
         </p>
+        
+        {/* Academic Image */}
+        <div className="flex justify-center my-6">
+          <div className="relative overflow-hidden rounded-xl border border-border/50 shadow-lg">
+            <img 
+              src={academicImage} 
+              alt="Educación intercultural académica"
+              className="w-full max-w-lg h-56 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4">
+              <p className="text-white text-sm font-medium bg-black/50 px-3 py-2 rounded backdrop-blur-sm">
+                Experimentación intercultural en el ámbito académico
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">

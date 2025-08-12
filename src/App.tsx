@@ -99,7 +99,7 @@ function App() {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2 bg-primary/10 px-3 py-2 rounded-full border border-primary/20">
                 <Mountain size={24} className="text-primary" />
-                <h1 className="text-xl font-bold text-primary">AndeanLearn</h1>
+                <h1 className="text-xl font-bold text-primary">Aprendizaje Intercultural</h1>
               </div>
               <Badge variant="secondary" className="text-xs font-medium">
                 Universidad Digital
@@ -179,12 +179,16 @@ function App() {
             <div className="flex items-center justify-center gap-2">
               <Mountain size={20} className="text-muted-foreground" />
               <p className="text-sm text-muted-foreground font-medium">
-                AndeanLearn - Preservando la sabiduría ancestral
+                Aprendizaje Intercultural - Preservando la sabiduría ancestral
               </p>
             </div>
             <p className="text-xs text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Plataforma educativa innovadora para el aprendizaje del Kichua y la cultura andina, 
               desarrollada con metodologías académicas modernas para la preservación del patrimonio cultural.
+              Esta iniciativa constituye un modelo experimental de aprendizaje intercultural que integra 
+              tecnologías digitales contemporáneas con conocimientos ancestrales, permitiendo validar 
+              nuevas metodologías pedagógicas para la revitalización de lenguas originarias y la 
+              transmisión de saberes tradicionales en contextos universitarios modernos.
             </p>
           </div>
         </div>

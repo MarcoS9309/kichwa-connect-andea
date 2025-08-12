@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Leaf, Sun, Users, Sparkle, MusicNote, PersonArmsSpread } from '@phosphor-icons/react'
 import { useKV } from '@github/spark/hooks'
+import abuelitoImage from '@/assets/images/El_abuelito.jpg'
 
 interface CulturalTopic {
   id: string
@@ -410,6 +411,23 @@ export const CulturalExplorer: React.FC<CulturalExplorerProps> = ({ onExploreTop
         <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           Descubre la riqueza de las tradiciones andinas y su profunda conexión con la naturaleza y la comunidad.
         </p>
+        
+        {/* Cultural Image */}
+        <div className="flex justify-center my-6">
+          <div className="relative overflow-hidden rounded-xl border border-border/50 shadow-lg">
+            <img 
+              src={abuelitoImage} 
+              alt="El Abuelito - Sabiduría ancestral andina"
+              className="w-full max-w-md h-48 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+            <div className="absolute bottom-3 left-3 right-3">
+              <p className="text-white text-sm font-medium bg-black/50 px-2 py-1 rounded backdrop-blur-sm">
+                El Abuelito - Guardián de la sabiduría ancestral
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Tabs defaultValue="all" className="w-full">

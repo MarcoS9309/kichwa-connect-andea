@@ -4,6 +4,7 @@ import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
 import { BookOpen, Sparkle, Trophy, Calendar } from '@phosphor-icons/react'
 import { useKV } from '@github/spark/hooks'
+import dashboardImage from '@/assets/images/c9f74bf3-0113-4e77-9f62-7ecca1f3ef10.jpg'
 
 export const Dashboard: React.FC = () => {
   const [completedLessons] = useKV<string[]>('completed-lessons', [])
@@ -86,7 +87,7 @@ export const Dashboard: React.FC = () => {
     {
       id: 'wisdom-keeper',
       title: 'Guardián de la Sabiduría',
-      description: 'Completaste todo el programa de AndeanLearn',
+      description: 'Completaste todo el programa de Aprendizaje Intercultural',
       unlocked: completedLessons.length >= 20 && exploredTopics.length >= 18,
       icon: '🏔️'
     }
@@ -102,6 +103,18 @@ export const Dashboard: React.FC = () => {
         <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           Sigue tu camino de aprendizaje del Kichua y descubrimiento de la cultura andina ancestral.
         </p>
+        
+        {/* Dashboard Image */}
+        <div className="flex justify-center my-6">
+          <div className="relative overflow-hidden rounded-xl border border-border/50 shadow-lg">
+            <img 
+              src={dashboardImage} 
+              alt="Experimentación intercultural"
+              className="w-full max-w-md h-48 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+          </div>
+        </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
