@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
 import { ArrowLeft, PlayCircle, PauseCircle, MusicNote, PersonArmsSpread, Heart, Sparkle } from '@phosphor-icons/react'
-import { useKV } from '@github/spark/hooks'
+import { useKV } from '@/spark/hooks'
 
 interface MusicDanceLesson {
   id: string

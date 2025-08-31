@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { BookOpen, Sparkle, Trophy, Mountain, MusicNote, GraduationCap } from '@phosphor-icons/react'
+import { BookOpen, Sparkle, Trophy, Mountains, GraduationCap } from '@phosphor-icons/react'
 import { LessonsView } from '@/components/LessonsView'
 import { CulturalExplorer } from '@/components/CulturalExplorer'
 import { LessonPlayer } from '@/components/LessonPlayer'
@@ -91,14 +91,14 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div id="spark-app" className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border/50 bg-card/50 backdrop-blur supports-[backdrop-filter]:bg-card/50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2 bg-primary/10 px-3 py-2 rounded-full border border-primary/20">
-                <Mountain size={24} className="text-primary" />
+                <Mountains size={24} className="text-primary" />
                 <h1 className="text-xl font-bold text-primary">AndeanLearn</h1>
               </div>
               <Badge variant="secondary" className="text-xs font-medium">
@@ -177,7 +177,7 @@ function App() {
         <div className="container mx-auto px-4 py-8">
           <div className="text-center space-y-4">
             <div className="flex items-center justify-center gap-2">
-              <Mountain size={20} className="text-muted-foreground" />
+              <Mountains size={20} className="text-muted-foreground" />
               <p className="text-sm text-muted-foreground font-medium">
                 AndeanLearn - Preservando la sabiduría ancestral
               </p>

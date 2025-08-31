@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
 import { BookOpen, Sparkle, Trophy, Calendar } from '@phosphor-icons/react'
-import { useKV } from '@github/spark/hooks'
+import { useKV } from '@/spark/hooks'
 
 export const Dashboard: React.FC = () => {
   const [completedLessons] = useKV<string[]>('completed-lessons', [])

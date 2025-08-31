@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { ArrowLeft, CheckCircle, Volume2, RotateCounterClockwise, Heart } from '@phosphor-icons/react'
-import { useKV } from '@github/spark/hooks'
+import { ArrowLeft, CheckCircle, SpeakerHigh, ArrowCounterClockwise, Heart } from '@phosphor-icons/react'
+import { useKV } from '@/spark/hooks'
 import { LessonImpact } from '@/components/LessonImpact'
 
 interface LessonContent {
@@ -222,7 +222,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ lesson, onComplete, 
               </div>
               
               <Button variant="outline" size="sm" className="gap-2">
-                <Volume2 size={16} />
+                <SpeakerHigh size={16} />
                 Escuchar pronunciación
               </Button>
             </div>
@@ -344,7 +344,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ lesson, onComplete, 
                 variant="outline"
                 className="gap-2"
               >
-                <RotateCounterClockwise size={16} />
+                <ArrowCounterClockwise size={16} />
                 Repetir Lección
               </Button>
               <Button 

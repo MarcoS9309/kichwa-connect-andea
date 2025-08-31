@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Leaf, Sun, Users, Sparkle, MusicNote, PersonArmsSpread } from '@phosphor-icons/react'
-import { useKV } from '@github/spark/hooks'
+import { useKV } from '@/spark/hooks'
 
 interface CulturalTopic {
   id: string
@@ -99,7 +99,7 @@ interface CulturalExplorerProps {
 }
 
 export const CulturalExplorer: React.FC<CulturalExplorerProps> = ({ onExploreTopic }) => {
-  const [exploredTopics, setExploredTopics] = useKV<string[]>('explored-topics', [])
+  const [exploredTopics] = useKV<string[]>('explored-topics', [])
 
   const topics: CulturalTopic[] = [
     {

@@ -3,8 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { Progress } from '@/components/ui/progress'
 import { Button } from '@/components/ui/button'
-import { BookOpen, Mountain, Star, Play, MusicNote, PersonArmsSpread } from '@phosphor-icons/react'
-import { useKV } from '@github/spark/hooks'
+import { BookOpen, Mountains, Star, Play, MusicNote, PersonArmsSpread } from '@phosphor-icons/react'
+import { useKV } from '@/spark/hooks'
 
 interface Lesson {
   id: string
@@ -131,7 +131,7 @@ interface LessonsViewProps {
 }
 
 export const LessonsView: React.FC<LessonsViewProps> = ({ onStartLesson }) => {
-  const [completedLessons, setCompletedLessons] = useKV<string[]>('completed-lessons', [])
+  const [completedLessons] = useKV<string[]>('completed-lessons', [])
   
   const lessons: Lesson[] = [
     {
@@ -471,7 +471,7 @@ export const LessonsView: React.FC<LessonsViewProps> = ({ onStartLesson }) => {
     <div className="space-y-6">
       <div className="text-center space-y-4">
         <div className="inline-flex items-center gap-3 bg-muted/50 px-4 py-2 rounded-full border border-border/30">
-          <Mountain size={20} className="text-primary" />
+          <Mountains size={20} className="text-primary" />
           <h1 className="text-2xl font-bold tracking-tight">Lecciones de Kichua</h1>
         </div>
         

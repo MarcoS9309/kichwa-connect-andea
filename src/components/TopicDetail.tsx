@@ -2,14 +2,14 @@ import React from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { ArrowLeft, BookOpen, CheckCircle, Volume2 } from '@phosphor-icons/react'
-import { useKV } from '@github/spark/hooks'
+import { ArrowLeft, BookOpen, CheckCircle, SpeakerHigh } from '@phosphor-icons/react'
+import { useKV } from '@/spark/hooks'
 
-interface CulturalTopic {
+export interface CulturalTopic {
   id: string
   title: string
   titleKichua: string
-  category: 'tradiciones' | 'ceremonias' | 'agricultura' | 'cosmovision'
+  category: 'tradiciones' | 'ceremonias' | 'agricultura' | 'cosmovision' | 'musica' | 'danza'
   description: string
   content: string
   vocabulary: Array<{
@@ -35,11 +35,13 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({ topic, onBack }) => {
     }
   }
 
-  const categoryColors = {
+  const categoryColors: Record<CulturalTopic['category'], string> = {
     tradiciones: 'bg-secondary text-secondary-foreground',
     ceremonias: 'bg-accent text-accent-foreground',
     agricultura: 'bg-muted text-muted-foreground',
-    cosmovision: 'bg-primary text-primary-foreground'
+    cosmovision: 'bg-primary text-primary-foreground',
+    musica: 'bg-accent text-accent-foreground',
+    danza: 'bg-secondary text-secondary-foreground'
   }
 
   const isExplored = exploredTopics.includes(topic.id)
@@ -108,7 +110,7 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({ topic, onBack }) => {
                         </p>
                       </div>
                       <Button variant="ghost" size="sm" className="opacity-60 hover:opacity-100">
-                        <Volume2 size={16} />
+                        <SpeakerHigh size={16} />
                       </Button>
                     </div>
                     

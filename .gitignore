@@ -25,9 +25,10 @@ dist-ssr
 *.sw?
 
 .env
-**/agent-eval-report*
-packages
-.file-manifest
-.devcontainer/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-.spark-workbench-id
+# Build artifacts
+.tsbuildinfo
