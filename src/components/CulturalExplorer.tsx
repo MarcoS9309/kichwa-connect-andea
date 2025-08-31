@@ -410,6 +410,18 @@ export const CulturalExplorer: React.FC<CulturalExplorerProps> = ({ onExploreTop
         <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           Descubre la riqueza de las tradiciones andinas y su profunda conexión con la naturaleza y la comunidad.
         </p>
+        
+        {/* Cultural Image */}
+        <div className="flex justify-center my-6">
+          <div className="relative overflow-hidden rounded-xl border border-border/50 shadow-lg bg-gradient-to-br from-primary/10 to-primary/20">
+            <div className="w-full max-w-md h-48 flex items-center justify-center">
+              <div className="text-center p-8">
+                <Users size={48} className="mx-auto mb-4 text-primary" />
+                <p className="text-primary font-medium">El Abuelito - Guardián de la sabiduría ancestral</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Tabs defaultValue="all" className="w-full">

@@ -1,9 +1,14 @@
+import React from 'react'
 import { Alert, AlertTitle, AlertDescription } from "./components/ui/alert";
 import { Button } from "./components/ui/button";
+import { Warning, ArrowsClockwise } from '@phosphor-icons/react'
 
-import { AlertTriangleIcon, RefreshCwIcon } from "lucide-react";
+interface ErrorFallbackProps {
+  error: Error
+  resetErrorBoundary: () => void
+}
 
-export const ErrorFallback = ({ error, resetErrorBoundary }) => {
+export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
   // When encountering an error in the development mode, rethrow it and don't display the boundary.
   // The parent UI will take care of showing a more helpful dialog.
   if (import.meta.env.DEV) throw error;
@@ -12,7 +17,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }) => {
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <Alert variant="destructive" className="mb-6">
-          <AlertTriangleIcon />
+          <Warning />
           <AlertTitle>Encontramos un error en la aplicación</AlertTitle>
           <AlertDescription>
             Ocurrió algo inesperado. A continuación verás el detalle técnico para que puedas reportarlo o intentar nuevamente.
@@ -31,7 +36,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }) => {
           className="w-full"
           variant="outline"
         >
-          <RefreshCwIcon />
+          <ArrowsClockwise />
           Intentar de nuevo
         </Button>
       </div>

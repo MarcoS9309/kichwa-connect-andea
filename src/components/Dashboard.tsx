@@ -86,8 +86,8 @@ export const Dashboard: React.FC = () => {
     {
       id: 'wisdom-keeper',
       title: 'Guardián de la Sabiduría',
-      description: 'Completaste todo el programa de AndeanLearn',
-      unlocked: completedLessons.length >= 10 && exploredTopics.length >= 8,
+      description: 'Completaste todo el programa de Aprendizaje Intercultural',
+      unlocked: completedLessons.length >= 20 && exploredTopics.length >= 18,
       icon: '🏔️'
     }
   ]
@@ -102,6 +102,18 @@ export const Dashboard: React.FC = () => {
         <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           Sigue tu camino de aprendizaje del Kichua y descubrimiento de la cultura andina ancestral.
         </p>
+        
+        {/* Dashboard Visual */}
+        <div className="flex justify-center my-6">
+          <div className="relative overflow-hidden rounded-xl border border-border/50 shadow-lg bg-gradient-to-br from-primary/10 to-secondary/20">
+            <div className="w-full max-w-md h-48 flex items-center justify-center">
+              <div className="text-center p-8">
+                <Sparkle size={48} className="mx-auto mb-4 text-primary" />
+                <p className="text-primary font-medium">Experimentación intercultural</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
